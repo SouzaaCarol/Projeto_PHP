@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="../project_php/img/favicon.svg">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
+    
+     <!--Google Font 'IBM Plex Sans'-->
+     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="reserva2.css">
+
+    <title>Compra de Ingresso</title>
+</head>
+
+<body>
+    <!-- NavBAR -->
+      <!-- Barra de navegação -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../img/logo_big.svg" alt="Logo"  width="150px" height="30px" class="d-inline-block align-text-top">
+                <span class="ms-4"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  " id="navbarNav">
+                <ul class="nav " >
+                  <li class="nav-item">
+                    <a class="nav-link options " href="../index.html">Home</a>
+                </li>
+            
+                    <li class="nav-item">
+                      <a class="nav-link options " href="../page_contato/page_contato.html">Contato</a>
+                    </li>
+                    
+                  </ul>
+                  <div class="d-flex ml-auto">
+                  <a href="../login/homeLogin.php">  <button class="btn custom-btn me-2 mr-20">Login</button></a>
+                    <button class="btn custom-btn">Cadastre-se</button>
+                  </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow-sm p-4" style="width: 22rem;">
+            <h1 class="text-center mb-4">Compre seu Ingresso</h1>
+            <p class="text-center">Preço por ingresso: <strong>R$ <span id="price">50.00</span></strong></p>
+            
+            <!-- Formulário -->
+            <form id="purchaseForm" action="processa_compra.php" method="POST">
+                <!-- Seleção de Dias -->
+                <div class="mb-3">
+                    <label for="dia" class="form-label">Escolha o dia:</label>
+                    <select class="form-select" id="dia" name="dia" required>
+                        <option value="" disabled selected>Selecione um dia</option>
+                        <option value="Segunda 12">Segunda, 12</option>
+                        <option value="Terça 13">Terça, 13</option>
+                        <option value="Quarta 14">Quarta, 14</option>
+                        <option value="Quinta 15">Quinta, 15</option>
+                    </select>
+                </div>
+
+                <!-- Seleção de Horários -->
+                <div class="mb-3">
+                    <label for="horario" class="form-label">Escolha o horário:</label>
+                    <select class="form-select" id="horario" name="horario" required>
+                        <option value="" disabled selected>Selecione um horário</option>
+                        <option value="10:00">10:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                </div>
+
+                <!-- Quantidade de ingressos -->
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantidade:</label>
+                    <input type="number" class="form-control text-center" id="quantity" name="quantity" value="1" min="1" onchange="updateTotal()" required>
+                </div>
+                
+                <div class="mt-4 text-center">
+                    <p class="fs-5">Total: <strong>R$ <span id="total">50.00</span></strong></p>
+                </div>
+
+                <!-- Campos ocultos para envio ao servidor -->
+                <input type="hidden" name="price" id="hiddenPrice" value="50.00">
+                <input type="hidden" name="total" id="hiddenTotal" value="50.00">
+
+                <button type="submit" class="btn btn-success w-100 mt-3">Comprar</button>
+            </form>
+        </div>
+    </div>
+
+            
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS não mexe -->
+    <!-- primeiro o jquery.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript para cálculo do total -->
+    <script>
+        function updateTotal() {
+            const price = 50.00; // Preço fixo do ingresso
+            const quantity = document.getElementById('quantity').value;
+            const total = (price * quantity).toFixed(2); // Calcula o total com 2 casas decimais
+            
+            // Atualiza os valores na tela e nos campos ocultos
+            document.getElementById('total').innerText = total;
+            document.getElementById('hiddenTotal').value = total;
+        }
+    </script>
+    
+    <footer class="rodape">
+        © Copyright 2024 - Ana Carolina Martins Souza, Kayke Gonçalves de Sousa, Mayara Caroline Alves Pereira.
+    </footer>
+
+    </body>
+</html>

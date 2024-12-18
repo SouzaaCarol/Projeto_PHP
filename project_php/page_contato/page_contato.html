@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="../img/favicon.svg">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="page_contato.css">
+    
+     <!--Google Font 'IBM Plex Sans'-->
+     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Fale Conosco</title>
+</head>
+
+<body>
+<!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="../" class="navbar-brand">
+                <img src="../img/logo_big.svg" alt="Logo"  width="150px" height="30px" class="d-inline-block align-text-top">
+                <span class="ms-4"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  " id="navbarNav">
+                <ul class="nav " >
+                    <li class="nav-item">
+                        <a class="nav-link options " href="../index.html">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link options  " href="../page_sinopse/sinopse.html">Filmes</a>
+                    </li>
+                  </ul>
+                  <div class="d-flex ml-auto">
+                    <a href="../login/homeLogin.php">  <button class="btn custom-btn me-2 mr-20">Login</button></a>
+                      <button class="btn custom-btn">Cadastre-se</button>
+                    </div>
+               
+            </div>
+        </div>
+    </nav>
+</head>
+
+<!-- FORM -->
+    <main>
+    <div class="container">
+        <h1>Fale Conosco</h1>
+        <form id="contatoForm" action="../page-contato-recebido/page_recebimento.php" method="POST" onsubmit="return confirmSubmission(event)">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            <div class="alinha-botao"> 
+            <input type="submit" value="Enviar Mensagem">
+            </div>
+            
+        </form>
+    </div>
+
+<!-- JavaScript do POPUP-->
+<script>
+    // Confirma o evento de submit pra previnir envio precoce
+    function confirmSubmission(event) {
+        event.preventDefault(); 
+        document.getElementById('popup-overlay').style.display = 'block';
+        document.getElementById('popup-confirmacao').style.display = 'block';
+    }
+
+    // Função para confirmar o envio
+    function confirmarEnvio() {
+        document.getElementById('contatoForm').submit(); 
+    }
+
+    // Função para fechar o popup
+    function fecharPopup() {
+        document.getElementById('popup-overlay').style.display = 'none';
+        document.getElementById('popup-confirmacao').style.display = 'none';
+    }
+</script>
+<!-- POPUP DE CONFIRMAÇÃO -->
+    <div id="popup-overlay"></div> 
+    <div id="popup-confirmacao"> 
+        <p align="center">Confirmar envio? </p>
+        <button class="resposta-envio" onclick="confirmarEnvio()">Sim</button>
+        <button class="resposta-envio" onclick="fecharPopup()">Não</button>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS não mexe -->
+    <!-- primeiro o jquery.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</main>
+    <footer class="rodape">
+        © Copyright 2024 - Ana Carolina Martins Souza, Kayke Gonçalves de Sousa, Mayara Caroline Alves Pereira.
+      </footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+body {
+    background-color: #202022;
+    background-image: url("../img/img_fita.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 1px;
+    background-size: cover;
+
+  }
+  
+  .navbar-brand img {
+    margin-right: 150px;
+  }
+  ul {
+    text-decoration: none;
+    .options {
+      color: #202380;
+      margin-right: 2px;
+    }
+  
+    
+  }
+  .custom-btn {
+      background-color: #202380; 
+      border-radius: 15px;
+      color: white;
+      padding: 4px 34px;
+      font-size: 10px;
+      box-shadow: none;
+  }
+    .custom-btn:hover {
+      background-color: #2f2d80; 
+    
+  }
+  
+  .mr-20{
+      margin-right: 30px;
+  }
+  .card{
+    margin:auto;
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+    width: 40%;
+    height: 50%;
+    overflow: visible;
+    border-radius: 20px
+    
+    
+  }
+  h5 {
+    font-size: 12px;
+    color: #202380;
+    font-family: 'IBM Plex Sans';
+  }
+  .date-button {
+    background-color: #f8f9fa;
+    border: none;
+    width: 80px;
+    height: 80px;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px; 
+    box-shadow: 5px 5px 5px rgba(46, 45, 45, 0); 
+    border-radius: 20px 20px
+
+  }
+ 
+.dia{
+  font-family: 'Inter';
+  font-size: 10px ;
+  margin-right: 36px;
+  margin-left: 10px;
+
+  
+
+}
+.num{
+  font-family: 'Red Hat Display';
+  font-size: 40px;
+}
+.date-button:hover {
+    background-color: #05294E;
+    color: #EFEFEF;
+  }
+
+  .time-button {
+    border: 1px;
+    background-color: #EFEFEF;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 80px;
+    height: 10px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .horarios {
+    display: flex;
+    justify-content: space-around; /* Distribui os botões com espaço entre eles */
+    align-items: center; /* Centraliza verticalmente os botões */
+    gap: 5px;
+  }
+  .time-button:hover {
+    background-color: #05294E;
+    color:#EFEFEF;
+  }
+
+  .selected-time {
+    background-color: #05294E;
+    color: #EFEFEF;
+  }
+
+  .card-img-center {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+  }
+
+  .reserve-btn {
+    display: inline-block; /* Faz o link se comportar como um botão */
+    width: auto; /* Remove o tamanho fixo para se ajustar ao conteúdo */
+    height: auto; /* Altura também ajusta automaticamente */
+    background-color: #202022; /* Cor do fundo */
+    color: #ffffff; /* Cor do texto */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 5px 15px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px; /* Ajuste do tamanho da fonte */
+    white-space: nowrap; /* Impede que o texto quebre */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+    cursor: pointer; /* Mostra o cursor de clique */
+  }
+  .reserve-btn:hover {
+    background-color: #404042; /* Cor ao passar o mouse */
+}
+  
+.login a {
+  text-decoration: none; /* Remove sublinhado do link */
+}
+
+  .trailer{
+      display: flex;
+      align-items: center; /* Alinha verticalmente */
+  }
+
+  .trailer img {
+      margin-right: 10px; /* Espaço entre a imagem e o link */
+      width: 50%;
+      height: 30%;
+  }
+  
+
+
+  a {
+    text-decoration: none;
+  }
+  
+
+  .reserve-btn:hover {
+    background-color: #05294E;
+  }
+  .rodape{
+    width: 100%;
+    height: 84px;
+    display: flex;
+    margin-top: 150px;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background-color: rgba(217, 217, 217, 0.42); 
+    font-size: 16px;
+    font-family: 'IBM Plex Sans';
+    font-weight: 600;
+  }
+  
+/* CSS do POPUP de confirmação */
+
+#popup-overlay{
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+#popup-confirmacao {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  z-index: 10;
+  font-family: 'IBM Plex Sans'; 
+  font-size: 25px;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  width: 40%;
+  height: 40%;
+  padding-top: 5px;
+  padding-left: 27px;
+  padding-right: 27px;
+  padding-bottom: 5px;
+  align-content: center;
+}
+
+#encerrar-popup{
+  background-color: #202022;
+  font-family: 'IBM Plex Sans'; 
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top:10px;
+  font-size: 18px;
+}
+
+/* CSS FOOTER */
+
+.rodape{
+  width: 100%;
+  height: 84px;
+  display: flex;
+  margin-top: 80px;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: rgba(217, 217, 217, 0.42); 
+  font-size: 16px;
+  font-family: 'IBM Plex Sans';
+  font-weight: 600;
+  padding-bottom: 0;
+  padding-top: 0;
+}

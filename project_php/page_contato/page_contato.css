@@ -1,0 +1,170 @@
+/* CSS NAVBAR */
+body {
+  background-color: #202022;
+  background-image: url("../img/img_fita.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 1px;
+  background-size: cover;
+}
+
+.navbar-brand img {
+  margin-right: 150px;
+}
+
+ul {
+  text-decoration: none;
+  
+}
+.options {
+  color: #202380;
+  margin-right: 2px;
+}
+
+.custom-btn {
+  background-color: #202380; 
+  border-radius: 15px;
+  color: white;
+  padding: 4px 34px;
+  font-size: 10px;
+  box-shadow: none;
+}
+.custom-btn:hover {
+  background-color: #2f2d80; 
+}
+
+.mr-20 {
+  margin-right: 30px;
+}
+
+/* CSS do FORM*/
+main {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+  }
+.container {
+    max-width: 500px;
+    margin:  auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    justify-content: center;
+    align-items: center; /* Alinha o botão vertical e horizontalmente */
+
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #2f2d80;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2f2d80;
+}
+
+.alinha-botao{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+/* CSS do POPUP de confirmação */
+
+.resposta-envio{
+background-color: #202380;
+color: white;
+border-radius: 15px;
+width: 40%;
+font-size: 10px;
+font-size: 12px;
+height: auto;
+padding: 4px;
+margin-left: 5%;
+margin-right: 2%;
+}
+
+#popup-overlay{
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+#popup-confirmacao {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  z-index: 10;
+  font-family: 'IBM Plex Sans'; 
+  font-size: 25px;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  width: 40%;
+  height: 40%;
+  padding-top: 5px;
+  padding-left: 27px;
+  padding-right: 27px;
+  padding-bottom: 5px;
+  align-content: center;
+}
+
+#encerrar-popup{
+  background-color: #202022;
+  font-family: 'IBM Plex Sans'; 
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top:10px;
+  font-size: 18px;
+}
+/*FOOTER - Use para as outras páginas!*/
+
+.rodape{
+  width: 100%;
+  height: 84px;
+  display: flex;
+  margin-top: 80px;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: rgba(217, 217, 217, 0.42); 
+  font-size: 16px;
+  font-family: 'IBM Plex Sans';
+  font-weight: 600;
+  padding-bottom: 0;
+  padding-top: 0;
+}

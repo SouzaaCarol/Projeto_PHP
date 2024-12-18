@@ -1,0 +1,121 @@
+body {
+  background-color: #202022;
+  background-image: url("../img/img_fita.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 1px;
+  background-size: cover;
+}
+
+.navbar-brand img {
+  margin-right: 150px;
+}
+
+ul {
+  text-decoration: none;
+  
+}
+.options {
+  color: #202380;
+  margin-right: 2px;
+}
+
+.custom-btn {
+  background-color: #202380; 
+  border-radius: 15px;
+  color: white;
+  padding: 4px 34px;
+  font-size: 10px;
+  box-shadow: none;
+}
+.custom-btn:hover {
+  background-color: #2f2d80; 
+}
+
+.mr-20 {
+  margin-right: 30px;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+/* CSS de recebimento dos dados via FORM */
+
+.card{
+  border-radius: 20px;
+  width: auto;
+  height: auto;
+  padding: 20px; 
+  display: flex;
+}
+.card-body{
+  text-align: center;
+  height: 45%;
+
+}
+#card-form{
+  text-align: center;
+  height: 100%;
+  width: 100vh;
+}
+.campo-form{
+  font-weight: 600; 
+
+}
+.variavel-form{
+  background-color: #E5E5E5;
+  border-radius: 5px;
+  color: #555252;
+  width: 100vh;
+  word-wrap: break-word; /* Permite a quebra de linha automática */
+  font-size: 14px;
+  padding: 1%;
+  font-weight: 600;
+}
+
+.card-title{
+  font-family: 'IBM Plex Sans';
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+  overflow-wrap: break-word;
+  max-width: 100%;
+
+}
+
+.botoes{
+  display: flex; /* Usar flexbox para alinhar os botões */
+  justify-content: center; /* Centralizar os botões */
+  margin-top: 30px; /* Espaçamento acima dos botões */
+}
+.botao-confirma{
+  background-color: #202380;
+  color: white;
+  border-radius: 15px;
+  width: 40%;
+  font-size: 10px;
+  margin: 0 10px;
+  font-size: 12px;
+  height: auto;
+  padding: 4px;
+}
+/*FOOTER - Use para as outras páginas!*/
+
+.rodape{
+  width: 100%;
+  height: 84px;
+  display: flex;
+  margin-top: 80px;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: rgba(217, 217, 217, 0.42); 
+  font-size: 16px;
+  font-family: 'IBM Plex Sans';
+  font-weight: 600;
+  padding-bottom: 0;
+  padding-top: 0;
+}
