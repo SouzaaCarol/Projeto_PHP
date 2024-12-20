@@ -30,7 +30,7 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE.md](L
 
 ## 🎥 Demonstração do Projeto
 
-<a href="[text](https://www.linkedin.com/posts/cmanasouza_ol%C3%A1-rede-hoje-quero-compartilhar-com-voc%C3%AAs-activity-7274452026791526400-5dhp?utm_source=share&utm_medium=member_desktop)" target="_blank" style="background-color: #0A66C2; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+<a href="https://www.linkedin.com/posts/cmanasouza_ol%C3%A1-rede-hoje-quero-compartilhar-com-voc%C3%AAs-activity-7274452026791526400-5dhp?utm_source=share&utm_medium=member_desktop" target="_blank" style="background-color: #0A66C2; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">
 🎥 Assista à Demonstração no LinkedIn
 </a>
 
